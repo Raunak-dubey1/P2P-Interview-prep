@@ -3,5 +3,12 @@ dotenv.config({quiet:true}); //quiet true removes the showing of no. of env file
 
 export const ENV={
     PORT:process.env.PORT,
-    MONGODB_URI:process.env.MONGODB_URI
+    MONGODB_URI:process.env.MONGODB_URI,
+    CLIENT_URL:process.env.CLIENT_URL,
+    INNGEST_EVENT_KEY:process.env.INNGEST_EVENT_KEY,
+    INNGEST_SIGNING_KEY:process.env.INNGEST_SIGNING_KEY,
+    STREAM_API_KEY:process.env.STREAM_API_KEY,
+    STREAM_API_SECRET:process.env.STREAM_API_SECRET,
+    CLERK_PUBLISHABLE_KEY:process.env.CLERK_PUBLISHABLE_KEY,
+    CLERK_SECRET_KEY:process.env.CLERK_SECRET_KEY
 }
