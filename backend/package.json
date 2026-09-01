@@ -10,9 +10,14 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@clerk/express": "^2.1.63",
+    "@stream-io/node-sdk": "^0.7.12",
+    "cors": "^2.8.6",
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
-    "mongoose": "^9.9.3"
+    "inngest": "^3.44.3",
+    "mongoose": "^9.9.3",
+    "stream-chat": "^9.51.0"
   },
   "devDependencies": {
     "nodemon": "^3.1.14"
