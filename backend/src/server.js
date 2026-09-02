@@ -30,7 +30,7 @@ app.get("/",(req,res)=>{
 const startServer=async()=>{
     try{
         await connectDB();
-         app.listen(PORT,()=> console.log(`Server is running at port: ${PORT}`))
+        app.listen(PORT,()=> console.log(`Server is running at port: ${PORT}`))
     }catch(error){
         console.error("failure while running server",error);
     }  
