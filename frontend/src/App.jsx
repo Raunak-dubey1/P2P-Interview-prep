@@ -1,9 +1,9 @@
 
 import {Navigate, Route, Routes } from 'react-router'
 import HomePage from './Pages/HomePage.jsx'
-import ProblemsPage from './Pages/ProblemPage.jsx';
+import ProblemsPage from './Pages/ProblemsPage.jsx';
+import ProblemPage from './Pages/ProblemPage.jsx';
 
-// import ProblemPage from './Pages/ProblemPage.jsx'
 import { Toaster } from 'react-hot-toast';
 import { useUser } from '@clerk/clerk-react';
 
@@ -16,6 +16,7 @@ function App() {
     <Routes>
      <Route path="/" element={<HomePage/>}/> 
      <Route path="/problems" element={isSignedIn?<ProblemsPage/>:<Navigate to="/"/>}/>
+      <Route path="/problem/:id" element={isSignedIn?<ProblemPage/>:<Navigate to="/"/>}/>
     </Routes>
     <Toaster/>
     </>

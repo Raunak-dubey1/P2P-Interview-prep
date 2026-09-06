@@ -75,10 +75,9 @@ export async function getActiveSessions(_,res){ //since we do not need req we pu
     try{
         const session=await Session.find({status:"active"})
         .populate("host","name profileImage") //populating means adding more details 
-        .sort({createdAt:-1})
-        .limit(5);                                      //here we are the details of host  
+        .sort({createdAt:-1})                 //here we adding the details of host
+        .limit(5);                                        
         
-
         return res.status(200).json({session});
     }catch(error){                            
         console.error("Error while handling getActiveSession Controller",error);
