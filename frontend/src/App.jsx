@@ -3,6 +3,7 @@ import {Navigate, Route, Routes } from 'react-router'
 import HomePage from './Pages/HomePage.jsx'
 import ProblemsPage from './Pages/ProblemsPage.jsx';
 import ProblemPage from './Pages/ProblemPage.jsx';
+import DashboardPage from './Pages/DashboardPage.jsx';
 
 import { Toaster } from 'react-hot-toast';
 import { useUser } from '@clerk/clerk-react';
@@ -17,6 +18,7 @@ function App() {
      <Route path="/" element={<HomePage/>}/> 
      <Route path="/problems" element={isSignedIn?<ProblemsPage/>:<Navigate to="/"/>}/>
       <Route path="/problem/:id" element={isSignedIn?<ProblemPage/>:<Navigate to="/"/>}/>
+       <Route path="/dashboard" element={isSignedIn ? <DashboardPage /> : <Navigate to={"/"} />} />
     </Routes>
     <Toaster/>
     </>
